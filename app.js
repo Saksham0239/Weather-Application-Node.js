@@ -6,6 +6,8 @@ const weather=require('./utils/weather_info');
 
 const app=express();
 
+const port= process.env.PORT || 3000;
+
 app.use(express.static(path.join(__dirname, 'public')));
 var partialsDirectory=path.join(__dirname,'views/partials');
 app.set('view engine','hbs');//giving a value to a particular setting of express
@@ -88,6 +90,6 @@ app.get('*',function(req,res){
 
 
 
-app.listen(3000,function(){
-    console.log('Server started on port 3000');
+app.listen(port,function(){
+    console.log('Server started on port '+port);
 });
