@@ -34,7 +34,7 @@ app.get('/about',function(req,res)
 
 app.get('/help',function(req,res){
     res.render('help',{
-        title: '1233456',
+        title: 'pratapsaksham12@gmail.com',
         name:'Saksham Pratap Singh'
     });
 });

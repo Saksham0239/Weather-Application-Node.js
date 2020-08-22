@@ -13,7 +13,8 @@ const weather=function(latitude,longitude,callback){
           } 
           else
           {
-              callback(undefined,{weather_description:('temprature: '+result.body.current.temperature+ ' degrees,  weather Type: ' + result.body.current.weather_descriptions+', humidity: '+ result.body.current.humidity),
+              callback(undefined,{weather_description:('temprature: '+result.body.current.temperature+ ' degrees,  weather Type: ' + result.body.current.weather_descriptions+', humidity: '+ result.body.current.humidity+
+              '%, precipitation: '+result.body.current.precip),
             country:result.body.location.country,region:result.body.location.region});
           }
     });
